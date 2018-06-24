@@ -3,7 +3,7 @@
 ## Setup
 1.  Git clone this repository
 2.  Create your virtual environment
-3.  Download required modules: ```pip install -r requiremens.txt```
+3.  Download required modules: ```pip install -r requirements.txt```
 4.  Copy file `config_template.py`, give it a new name `config.py` and fill it following the hints inside
 ## How to run
 The starting file is the `app.py`. You have two options: run it with, or without parameters:
@@ -18,4 +18,6 @@ The order of given parameters matters!
 
 ###### Example:
 ```python app.py dog 15```
+
+
 ```python app.py "longer example" 50```
