@@ -20,3 +20,8 @@ def insert_image_entity(db_connection, image_blob, url, avg_red_lvl, avg_green_l
         'INSERT INTO images(content, url, average_red_lvl, average_green_lvl, average_blue_lvl) VALUES(?,?,?,?,?)',
         [image_blob, url, avg_red_lvl, avg_green_lvl, avg_blue_lvl])
     db_connection.commit()
+
+
+def find_the_most_red_image(db_connection):
+    cursor = db_connection.execute('SELECT content, average_red_lvl FROM images ORDER BY average_red_lvl DESC LIMIT 1')
+    return cursor.fetchone()
