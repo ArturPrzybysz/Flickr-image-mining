@@ -1,6 +1,4 @@
 from requests import get
-import os
-from config import ROOT_DIR
 from PIL import Image
 import numpy as np
 from src.db.db_operations import insert_image_entity
@@ -19,8 +17,6 @@ def save_images_to_db(urls: [str], db_connection):
                                 avg_red_lvl=red,
                                 avg_green_lvl=green,
                                 avg_blue_lvl=blue)
-
-            image.show()
         else:
             print("Failed to download image: ", url)
 
